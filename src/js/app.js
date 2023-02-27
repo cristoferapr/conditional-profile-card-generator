@@ -1,3 +1,4 @@
+import { basePlacements } from "@popperjs/core";
 import "../style/index.css";
 
 /**
@@ -73,23 +74,23 @@ let base = {
 window.onload = function() {
   window.variables = {
     // if includeCover is true the algorithm should
-    includeCover: true,
+    includeCover: base.includeCover,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background: base.background,
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL: base.avatarURL,
     // social media bar position (left or right)
-    socialMediaPosition: "position-left",
+    socialMediaPosition: base.socialMediaPosition,
     // social media usernames
-    twitter: null,
-    github: "alesanchezr",
-    linkedin: null,
+    twitter: base.twitter,
+    github: base.github,
+    linkedin: base.linkedin,
     instagram: null,
-    name: "Name",
-    lastname: "Lastname",
-    role: "Select your role",
-    country: "Your Country",
-    city: "Your City"
+    name: base.name,
+    lastname: base.lastname,
+    role: base.role,
+    country: base.country,
+    city: base.city
   };
   let old = window.variables;
   render(window.variables); //render the card for the first time
